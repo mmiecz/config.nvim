@@ -155,8 +155,15 @@ require('lazy').setup({
     'navarasu/onedark.nvim',
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'onedark'
+      --vim.cmd.colorscheme 'onedark'
     end,
+  },
+
+  {
+    'luisiacc/gruvbox-baby',
+    config = function()
+      vim.cmd.colorscheme 'gruvbox-baby'
+    end
   },
 
   {
@@ -166,7 +173,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'onedark',
+        theme = 'gruvbox-baby',
         component_separators = '|',
         section_separators = '',
       },
