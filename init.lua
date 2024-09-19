@@ -162,7 +162,16 @@ require('lazy').setup({
   {
     'luisiacc/gruvbox-baby',
     config = function()
-      vim.cmd.colorscheme 'gruvbox-baby'
+    end
+  },
+
+  {
+    "neanias/everforest-nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require('everforest').setup({})
+      vim.cmd.colorscheme 'everforest'
     end
   },
 
@@ -531,7 +540,7 @@ require('mason-lspconfig').setup()
 --  If you want to override the default filetypes that your language server will attach to you can
 --  define the property 'filetypes' to the map in question.
 local servers = {
-  -- clangd = {},
+  clangd = {},
   -- gopls = {},
   -- pyright = {},
   rust_analyzer = {},
