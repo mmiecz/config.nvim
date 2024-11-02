@@ -4,14 +4,6 @@
 -- See the kickstart.nvim README for more information
 return {
   {
-    'ggandor/leap.nvim',
-    lazy = false,
-    priority = 999,
-    config = function()
-      require('leap').create_default_mappings()
-    end,
-  },
-  {
     'ellisonleao/gruvbox.nvim',
     lazy = false,
     priority = 1000,
@@ -45,6 +37,8 @@ return {
       -- Set colorscheme
       vim.o.background = 'dark' -- or 'light' for light version
       vim.cmd 'colorscheme gruvbox'
+
+      vim.keymap.set('n', '<leader>tb', ':set background=<C-r>=&background == "dark" ? "light" : "dark"<CR><CR>', { desc = 'Toggle background dark/light' })
     end,
   },
 }
